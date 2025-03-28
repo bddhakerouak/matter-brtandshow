@@ -59,7 +59,7 @@ var animation = Bodies.rectangle(900, 90, 128, 40, {chamfer: {radius: radius}, r
 var vintage = Bodies.rectangle(790, 140, 104, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/5BSBvSm.png', xScale: 0.5, yScale: 0.5 }}})
 var short = Bodies.rectangle(970, 390, 82, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/VEyrikN.png', xScale: 0.5, yScale: 0.5 }}})
 //misc
-var website = Bodies.rectangle(760, 420, 108, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hr9p4uV.png', xScale: 0.5, yScale: 0.5 }}})
+var website = Bodies.rectangle(760, 420, 108, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/wojGBlT.png', xScale: 2, yScale: 2 }}})
 var article = Bodies.rectangle(1100, 380, 92, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/n6TV7XG.png', xScale: 0.5, yScale: 0.5 }}})
 var music = Bodies.rectangle(1290, 360, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/dax8MwT.png', xScale: 0.5, yScale: 0.5 }}})
 var star = Bodies.rectangle(1200, 260, 42, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/C2qPMbB.png', xScale: 0.5, yScale: 0.5 }}})
@@ -68,6 +68,7 @@ var about = Bodies.rectangle(930, 140, 87, 40, {chamfer: {radius: radius}, rende
 var instagram = Bodies.rectangle(920, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 0.5, yScale: 0.5 }}, url: 'https://www.instagram.com/fuse.blog/'})
 var random = Bodies.rectangle(930, 180, 112, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/YS51eIC.png', xScale: 0.5, yScale: 0.5 }}})
 var matilda = Bodies.rectangle(930, 180, 165, 76, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3830-3437-4538-b762-653738393335/Matilda.png', xScale: 1, yScale: 1 }}})
+
 
 // Original Shape
 // var illustration = Bodies.rectangle(70, 500, 133, 40, {render: { fillStyle: arts}, chamfer: {radius: 20}})
