@@ -48,13 +48,13 @@ var radius = 20
 // create objects
 
 // art & design
-var eye = Bodies.rectangle(661, -93, 275, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3537-3939-4164-b432-386635386632/eye.svg', xScale: 1, yScale: 1 }}})
-var alpha = Bodies.rectangle(128, 330, 527, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3065-6333-4639-b735-633666356466/alpha.svg', xScale: 1, yScale: 1 }}})
-var light = Bodies.rectangle(458, 83, 209, 209, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6233-6661-4335-a664-323638316466/light.svg', xScale: 1, yScale: 1 }}})
-var coins = Bodies.rectangle(128, 65, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3830-4938-a166-343266393963/coins.svg', xScale: 1, yScale: 1 }}})
-var balanceDisplay = Bodies.rectangle(278, -29, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-6235-4633-b566-336331346239/balanceDisplay.svg', xScale: 1, yScale: 1 }}})
+var eye = Bodies.rectangle(1061, 127, 275, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3537-3939-4164-b432-386635386632/eye.svg', xScale: 1, yScale: 1 }}})
+var alpha = Bodies.rectangle(428, 370, 527, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3065-6333-4639-b735-633666356466/alpha.svg', xScale: 1, yScale: 1 }}})
+var light = Bodies.rectangle(818, 125, 209, 209, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6233-6661-4335-a664-323638316466/light.svg', xScale: 1, yScale: 1 }}})
+var coins = Bodies.rectangle(428, 105, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3830-4938-a166-343266393963/coins.svg', xScale: 1, yScale: 1 }}})
+var balanceDisplay = Bodies.rectangle(678, 11, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-6235-4633-b566-336331346239/balanceDisplay.svg', xScale: 1, yScale: 1 }}})
 // video
-var CPM = Bodies.rectangle(661, 265, 411, 306, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6531-6137-4133-a230-626166383230/CPM.svg', xScale: 1, yScale: 1 }}})
+var CPM = Bodies.rectangle(1061, 305, 411, 306, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6531-6137-4133-a230-626166383230/CPM.svg', xScale: 1, yScale: 1 }}})
 
 
 // Original Shape
