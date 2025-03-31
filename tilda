@@ -12,7 +12,7 @@ var canvas = document.getElementById('canvas');
 var engine = Engine.create(),
     world = engine.world;
 
-engine.world.gravity.y = 3;
+engine.world.gravity.y = 1;
 engine.world.gravity.x = 0;
 
 // create a renderer
@@ -48,26 +48,25 @@ var radius = 20
 // create objects
 
 // art & design
-var illustration = Bodies.rectangle(970, 50, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hYbWXii.png', xScale: 1, yScale: 1 }}})
-var art = Bodies.rectangle(935, 60, 56, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/zyfoqTa.png', xScale: 1, yScale: 1 }}})
-var threeD = Bodies.rectangle(990, 160, 52, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/uGJCiNU.png', xScale: 1, yScale: 1 }}})
-var graphic = Bodies.rectangle(960, 120, 105, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/WWVOA71.png', xScale: 1, yScale: 1 }}})
-var photo = Bodies.rectangle(1250, 380, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/KuL7ppn.png', xScale: 1, yScale: 1 }}})
+var illustration = Bodies.rectangle(970, 50, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hYbWXii.png', xScale: 0.5, yScale: 0.5 }}})
+var art = Bodies.rectangle(935, 60, 56, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/zyfoqTa.png', xScale: 0.5, yScale: 0.5 }}})
+var threeD = Bodies.rectangle(990, 160, 52, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/uGJCiNU.png', xScale: 0.5, yScale: 0.5 }}})
+var graphic = Bodies.rectangle(960, 120, 105, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/WWVOA71.png', xScale: 0.5, yScale: 0.5 }}})
+var photo = Bodies.rectangle(1250, 380, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/KuL7ppn.png', xScale: 0.5, yScale: 0.5 }}})
 // video
-var documentary = Bodies.rectangle(920, 140, 165, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/2snc4iV.png', xScale: 1.5, yScale: 1.5 }}})
-var animation = Bodies.rectangle(900, 90, 128, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/rSnEY9Q.png', xScale: 1, yScale: 1 }}})
-var vintage = Bodies.rectangle(790, 140, 104, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/5BSBvSm.png', xScale: 1, yScale: 1 }}})
-var short = Bodies.rectangle(970, 390, 82, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/VEyrikN.png', xScale: 1, yScale: 1 }}})
+var documentary = Bodies.rectangle(920, 140, 165, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/2snc4iV.png', xScale: 0.5, yScale: 0.5 }}})
+var animation = Bodies.rectangle(900, 90, 128, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/rSnEY9Q.png', xScale: 0.5, yScale: 0.5 }}})
+var vintage = Bodies.rectangle(790, 140, 104, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/5BSBvSm.png', xScale: 0.5, yScale: 0.5 }}})
+var short = Bodies.rectangle(970, 390, 82, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/VEyrikN.png', xScale: 0.5, yScale: 0.5 }}})
 //misc
-var website = Bodies.rectangle(760, 420, 108, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hr9p4uV.png', xScale: 1, yScale: 1 }}})
-var article = Bodies.rectangle(1100, 380, 92, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/n6TV7XG.png', xScale: 1, yScale: 1 }}})
-var music = Bodies.rectangle(1290, 360, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/dax8MwT.png', xScale: 1, yScale: 1 }}})
-var star = Bodies.rectangle(1200, 260, 42, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/C2qPMbB.png', xScale: 1, yScale: 1 }}})
+var website = Bodies.rectangle(760, 420, 108, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hr9p4uV.png', xScale: 0.5, yScale: 0.5 }}})
+var article = Bodies.rectangle(1100, 380, 92, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/n6TV7XG.png', xScale: 0.5, yScale: 0.5 }}})
+var music = Bodies.rectangle(1290, 360, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/dax8MwT.png', xScale: 0.5, yScale: 0.5 }}})
+var star = Bodies.rectangle(1200, 260, 42, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/C2qPMbB.png', xScale: 0.5, yScale: 0.5 }}})
 //about
-var about = Bodies.rectangle(930, 140, 87, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/4gPcZVN.png', xScale: 1, yScale: 1 }}})
-var instagram = Bodies.rectangle(920, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 1, yScale: 1 }}, url: 'https://www.instagram.com/fuse.blog/'})
-var random = Bodies.rectangle(930, 180, 112, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/YS51eIC.png', xScale: 1, yScale: 1 }}})
-var matilda = Bodies.rectangle(930, 180, 165, 76, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3830-3437-4538-b762-653738393335/Matilda.png', xScale: 1, yScale: 1 }}})
+var about = Bodies.rectangle(930, 140, 87, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/4gPcZVN.png', xScale: 0.5, yScale: 0.5 }}})
+var instagram = Bodies.rectangle(920, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 0.5, yScale: 0.5 }}, url: 'https://www.instagram.com/fuse.blog/'})
+var random = Bodies.rectangle(930, 180, 112, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/YS51eIC.png', xScale: 0.5, yScale: 0.5 }}})
 
 
 // Original Shape
@@ -76,7 +75,7 @@ var matilda = Bodies.rectangle(930, 180, 165, 76, {chamfer: {radius: radius}, re
 
 // add all of the bodies to the world
 World.add(engine.world, [
-  ground, wallLeft, wallRight, roof, illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random, matilda
+  ground, wallLeft, wallRight, roof, illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random
 ]);
 
 // add mouse control
