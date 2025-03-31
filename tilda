@@ -48,13 +48,13 @@ var radius = 20
 // create objects
 
 // art & design
-var illustration = Bodies.rectangle(970, 50, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hYbWXii.png', xScale: 0.5, yScale: 0.5 }}})
-var art = Bodies.rectangle(935, 60, 56, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/zyfoqTa.png', xScale: 0.5, yScale: 0.5 }}})
-var threeD = Bodies.rectangle(990, 160, 52, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/uGJCiNU.png', xScale: 0.5, yScale: 0.5 }}})
-var graphic = Bodies.rectangle(960, 120, 105, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/WWVOA71.png', xScale: 0.5, yScale: 0.5 }}})
-var photo = Bodies.rectangle(1250, 380, 86, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/KuL7ppn.png', xScale: 0.5, yScale: 0.5 }}})
+var illustration = Bodies.rectangle(970, 50, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/hYbWXii.png', xScale: 0.7, yScale: 0.7 }}})
+var art = Bodies.rectangle(935, 60, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/zyfoqTa.png', xScale: 0.7, yScale: 0.7 }}})
+var threeD = Bodies.rectangle(990, 160, 209, 209, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/uGJCiNU.png', xScale: 0.7, yScale: 0.7 }}})
+var graphic = Bodies.rectangle(960, 120, 527, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/WWVOA71.png', xScale: 0.7, yScale: 0.7 }}})
+var photo = Bodies.rectangle(1250, 380, 275, 260, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6161-3330-4365-b831-323065623334/eye_-_Imgur.png', xScale: 0.7, yScale: 0.7 }}})
 // video
-var documentary = Bodies.rectangle(920, 140, 165, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/2snc4iV.png', xScale: 0.5, yScale: 0.5 }}})
+var documentary = Bodies.rectangle(920, 140, 411, 36, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/2snc4iV.png', xScale: 0.7, yScale: 0.7 }}})
 
 
 // Original Shape
