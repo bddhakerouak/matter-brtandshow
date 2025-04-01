@@ -1,0 +1,161 @@
+<script>
+var canvaas = document.getElementById('canvaas');
+    var Engine = Matter.Engine,
+    Render = Matter.Render,
+    Events = Matter.Events,
+    MouseConstraint = Matter.MouseConstraint,
+    Mouse = Matter.Mouse,
+    World = Matter.World,
+    Bodies = Matter.Bodies;
+
+// create an engine
+var engine = Engine.create(),
+    world = engine.world;
+
+engine.world.gravity.y = 1;
+engine.world.gravity.x = 0;
+
+// create a renderer
+var render = Render.create({
+    element: canvaas,
+    engine: engine,
+    options: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      pixelRatio: 2,
+      background: 'transparent',
+      wireframes: false,
+    }
+});
+
+
+// create bounds
+var ground = Bodies.rectangle(
+  (window.innerWidth / 2) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: '#080808'}, isStatic: true });
+var wallLeft = Bodies.rectangle( -80, window.innerHeight / 2, 160,   window.innerHeight, { isStatic: true });
+var wallRight = Bodies.rectangle(window.innerWidth + 80, window.innerHeight / 2, 160, 1200, { isStatic: true })
+
+// object colors & variables
+var arts = "#000"
+var videos = "#B3E8F3"
+var abouts = '#4D4D4D'
+
+var border = 1
+var radius = 20
+
+// create objects
+
+// art & design
+var wallet = Bodies.rectangle(104, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6565-6432-4932-b562-313333393566/wallet.svg', xScale: 1, yScale: 1 }}})
+var user = Bodies.rectangle(217, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6464-6161-4866-b461-303537663731/user.svg', xScale: 1, yScale: 1 }}})
+var trashcan = Bodies.rectangle(327, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6664-6264-4062-a638-643736303763/trashcan.svg', xScale: 1, yScale: 1 }}})
+var support = Bodies.rectangle(437, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3065-6232-4637-b861-376263653337/support.svg', xScale: 1, yScale: 1 }}})
+var settings = Bodies.rectangle(547, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3761-3462-4363-b664-356366633633/settings.svg', xScale: 1, yScale: 1 }}})
+var messagecircle = Bodies.rectangle(657, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3665-6431-4366-a638-356465386236/messagecircle.svg', xScale: 1, yScale: 1 }}})
+var mail = Bodies.rectangle(767, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3863-6262-4031-b231-306463663131/mail.svg', xScale: 1, yScale: 1 }}})
+var magnet = Bodies.rectangle(877, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3438-3661-4139-b733-646265376237/magnet.svg', xScale: 1, yScale: 1 }}})
+var logout = Bodies.rectangle(987, 1, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6630-6635-4931-b236-663737623766/logout.svg', xScale: 1, yScale: 1 }}})
+var lock = Bodies.rectangle(104, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3834-3936-4331-a138-376666393636/lock.svg', xScale: 1, yScale: 1 }}})
+var lockopen = Bodies.rectangle(217, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6439-6234-4138-a237-623263323438/lockopen.svg', xScale: 1, yScale: 1 }}})
+var link = Bodies.rectangle(327, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6566-3366-4066-a639-323165346164/link.svg', xScale: 1, yScale: 1 }}})
+var lightning = Bodies.rectangle(437, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3638-3238-4531-b731-346137386436/lightning.svg', xScale: 1, yScale: 1 }}})
+var infocircle = Bodies.rectangle(547, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6238-3338-4761-a132-643736643039/infocircle.svg', xScale: 1, yScale: 1 }}})
+var home = Bodies.rectangle(657, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6636-3337-4066-b132-343830313739/home.svg', xScale: 1, yScale: 1 }}})
+var heartbeat = Bodies.rectangle(767, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3366-6263-4361-a436-383861343638/heartbeat.svg', xScale: 1, yScale: 1 }}})
+var graph = Bodies.rectangle(877, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6632-6531-4436-a433-383436616234/graph.svg', xScale: 1, yScale: 1 }}})
+var folder = Bodies.rectangle(987, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6665-3433-4364-b664-653835393530/folder.svg', xScale: 1, yScale: 1 }}})
+var folderopen = Bodies.rectangle(987, 110, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3439-3538-4631-b435-383261303939/folderopen.svg', xScale: 1, yScale: 1 }}})
+var flag = Bodies.rectangle(104, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-3130-4637-b366-333138653066/flag.svg', xScale: 1, yScale: 1 }}})
+var fire = Bodies.rectangle(217, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3431-6539-4230-b832-633832643838/fire.svg', xScale: 1, yScale: 1 }}})
+var filter = Bodies.rectangle(327, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6538-6561-4262-b264-303638376332/filter.svg', xScale: 1, yScale: 1 }}})
+var edit = Bodies.rectangle(104, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3539-3265-4062-b933-353738396562/edit.svg', xScale: 1, yScale: 1 }}})
+var copy = Bodies.rectangle(437, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6665-6161-4366-a165-393732303933/copy.svg', xScale: 1, yScale: 1 }}})
+var coins = Bodies.rectangle(547, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6137-6639-4563-a563-353934393537/coins.svg', xScale: 1, yScale: 1 }}})
+var coin = Bodies.rectangle(657, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3431-6566-4563-a264-393137363734/coin.svg', xScale: 1, yScale: 1 }}})
+var chevronright = Bodies.rectangle(767, 220, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3534-3435-4937-b339-383533363239/chevronright.svg', xScale: 1, yScale: 1 }}})
+var chevronleft = Bodies.rectangle(104, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3061-3639-4033-a335-333135666466/chevronleft.svg', xScale: 1, yScale: 1 }}})
+var chevrondown = Bodies.rectangle(217, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3735-3265-4236-a539-396163613038/chevrondown.svg', xScale: 1, yScale: 1 }}})
+var chevronup = Bodies.rectangle(104, 550, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6130-3033-4162-b839-633462643662/chevronup.svg', xScale: 1, yScale: 1 }}})
+var chart = Bodies.rectangle(327, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3630-3864-4261-a466-346134376437/chart.svg', xScale: 1, yScale: 1 }}})
+var chartalt = Bodies.rectangle(437, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3837-3439-4064-b964-306466343533/chartalt.svg', xScale: 1, yScale: 1 }}})
+var category = Bodies.rectangle(547, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3861-3665-4432-b661-343930643734/category.svg', xScale: 1, yScale: 1 }}})
+var case = Bodies.rectangle(657, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3738-3830-4133-a165-616632363731/case.svg', xScale: 1, yScale: 1 }}})
+var barchart = Bodies.rectangle(767, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3236-3663-4563-b834-343032383535/barchart.svg', xScale: 1, yScale: 1 }}})
+var arrowright = Bodies.rectangle(104, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6439-3734-4861-b633-653234376632/arrowright.svg', xScale: 1, yScale: 1 }}})
+var arrowleft = Bodies.rectangle(217, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3566-6438-4732-a232-366163613965/arrowleft.svg', xScale: 1, yScale: 1 }}})
+var arrowfromright = Bodies.rectangle(327, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3134-3331-4065-b532-613362653133/arrowfromright.svg', xScale: 1, yScale: 1 }}})
+var arrowfromleft = Bodies.rectangle(437, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3836-6661-4536-a361-633233303331/arrowfromleft.svg', xScale: 1, yScale: 1 }}})
+var arrowdown = Bodies.rectangle(547, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3662-3630-4466-a262-366333663162/arrowdown.svg', xScale: 1, yScale: 1 }}})
+var coinstack = Bodies.rectangle(657, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6366-3161-4530-b366-616431623238/coinstack.svg', xScale: 1, yScale: 1 }}})
+var capsule = Bodies.rectangle(217, 550, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3137-3561-4037-b439-646664656438/capsule.svg', xScale: 1, yScale: 1 }}})
+var bell = Bodies.rectangle(327, 550, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3465-4936-a166-353864303363/bell.svg', xScale: 1, yScale: 1 }}})
+
+
+// Original Shape
+// var illustration = Bodies.rectangle(70, 500, 133, 40, {render: { fillStyle: arts}, chamfer: {radius: 20}})
+
+
+// add all of the bodies to the world
+World.add(engine.world, [
+  ground, wallLeft, wallRight, arrowdown, arrowfromleft, arrowfromright, arrowleft, arrowright, barchart, bell, capsule, case, category, chartalt, chart, chevrondown, chevronleft, chevronright, chevronup, coinstack, coin, coins, copy, edit, filter, fire, flag, folder, folderopen, graph, heartbeat, home, infocircle, lightning, link, lockopen, lock, logout, magnet, mail, messagecircle, settings, support, trashcan, user, wallet
+]);
+
+// add mouse control
+var mouse = Mouse.create(render.canvaas),
+    mouseConstraint = MouseConstraint.create(engine, {
+      mouse: mouse,
+      constraint: {
+        stiffness: 0.2,
+        render: {
+          visible: false
+        }
+      }
+    });
+
+World.add(world, mouseConstraint);
+
+// keep the mouse in sync with rendering
+render.mouse = mouse;
+
+// Allow page scrolling in matter.js window
+mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
+mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+
+// Detect clicks vs. drags
+let click = false;
+
+document.addEventListener('mousedown', () => click = true);
+document.addEventListener('mousemove', () => click = false);
+document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
+
+// Create a On-Mouseup Event-Handler
+Events.on(mouseConstraint, 'mouseup', function(event) {
+  var mouseConstraint = event.source;
+  var bodies = engine.world.bodies;
+  if (!mouseConstraint.bodyB) {
+    for (i = 0; i < bodies.length; i++) { 
+      var body = bodies[i];
+      // Check if clicked or dragged
+      if (click === true) {
+      if (Matter.Bounds.contains(body.bounds, mouseConstraint.mouse.position)) {
+          var bodyUrl = body.url;
+          console.log("Body.Url >> " + bodyUrl);
+          // Hyperlinking feature
+          if (bodyUrl != undefined) {
+            //window.location.href = bodyUrl;
+            window.open(bodyUrl, '_blank');
+            console.log("Hyperlink was opened");
+          }
+          break;
+        }
+      }
+    }
+  }
+});
+
+// run the engine
+Engine.run(engine);
+
+// run the renderer
+Render.run(render);
+</script>
