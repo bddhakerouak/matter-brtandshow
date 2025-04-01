@@ -1,5 +1,5 @@
 <script>
-var canvaas = document.getElementById('canvaas');
+var canvas = document.getElementById('canvas');
     var Engine = Matter.Engine,
     Render = Matter.Render,
     Events = Matter.Events,
@@ -17,7 +17,7 @@ engine.world.gravity.x = 0;
 
 // create a renderer
 var render = Render.create({
-    element: canvaas,
+    element: canvas,
     engine: engine,
     options: {
       width: window.innerWidth,
@@ -79,7 +79,7 @@ var chevronup = Bodies.rectangle(104, 550, 110, 110, {chamfer: {radius: radius},
 var chart = Bodies.rectangle(327, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3630-3864-4261-a466-346134376437/chart.svg', xScale: 1, yScale: 1 }}})
 var chartalt = Bodies.rectangle(437, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3837-3439-4064-b964-306466343533/chartalt.svg', xScale: 1, yScale: 1 }}})
 var category = Bodies.rectangle(547, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3861-3665-4432-b661-343930643734/category.svg', xScale: 1, yScale: 1 }}})
-var case = Bodies.rectangle(657, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3738-3830-4133-a165-616632363731/case.svg', xScale: 1, yScale: 1 }}})
+var bag = Bodies.rectangle(657, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3064-3938-4662-a132-373733393164/bag.svg', xScale: 1, yScale: 1 }}})
 var barchart = Bodies.rectangle(767, 330, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3236-3663-4563-b834-343032383535/barchart.svg', xScale: 1, yScale: 1 }}})
 var arrowright = Bodies.rectangle(104, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6439-3734-4861-b633-653234376632/arrowright.svg', xScale: 1, yScale: 1 }}})
 var arrowleft = Bodies.rectangle(217, 440, 110, 110, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3566-6438-4732-a232-366163613965/arrowleft.svg', xScale: 1, yScale: 1 }}})
@@ -101,7 +101,7 @@ World.add(engine.world, [
 ]);
 
 // add mouse control
-var mouse = Mouse.create(render.canvaas),
+var mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {
