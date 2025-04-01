@@ -34,8 +34,6 @@ var ground = Bodies.rectangle(
   (window.innerWidth / 2) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: '#080808'}, isStatic: true });
 var wallLeft = Bodies.rectangle( -80, window.innerHeight / 2, 160,   window.innerHeight, { isStatic: true });
 var wallRight = Bodies.rectangle(window.innerWidth + 80, window.innerHeight / 2, 160, 1200, { isStatic: true })
-var roof = Bodies.rectangle(
-  (window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
 
 // object colors & variables
 var arts = "#000"
@@ -48,11 +46,11 @@ var radius = 20
 // create objects
 
 // art & design
-var eye = Bodies.rectangle(1061, 127, 275, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3537-3939-4164-b432-386635386632/eye.svg', xScale: 1, yScale: 1 }}})
-var alpha = Bodies.rectangle(428, 370, 527, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3065-6333-4639-b735-633666356466/alpha.svg', xScale: 1, yScale: 1 }}})
-var light = Bodies.rectangle(818, 125, 209, 209, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6233-6661-4335-a664-323638316466/light.svg', xScale: 1, yScale: 1 }}})
-var coins = Bodies.rectangle(428, 105, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3830-4938-a166-343266393963/coins.svg', xScale: 1, yScale: 1 }}})
-var balanceDisplay = Bodies.rectangle(678, 11, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-6235-4633-b566-336331346239/balanceDisplay.svg', xScale: 1, yScale: 1 }}})
+var eye = Bodies.rectangle(1061, -127, 275, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3537-3939-4164-b432-386635386632/eye.svg', xScale: 1, yScale: 1 }}})
+var alpha = Bodies.rectangle(578, 370, 527, 261, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3065-6333-4639-b735-633666356466/alpha.svg', xScale: 1, yScale: 1 }}})
+var light = Bodies.rectangle(818, -125, 209, 209, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6233-6661-4335-a664-323638316466/light.svg', xScale: 1, yScale: 1 }}})
+var coins = Bodies.rectangle(428, -105, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3830-4938-a166-343266393963/coins.svg', xScale: 1, yScale: 1 }}})
+var balanceDisplay = Bodies.rectangle(528, -285, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-6235-4633-b566-336331346239/balanceDisplay.svg', xScale: 1, yScale: 1 }}})
 // video
 var CPM = Bodies.rectangle(1061, 305, 411, 306, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6531-6137-4133-a230-626166383230/CPM.svg', xScale: 1, yScale: 1 }}})
 
@@ -63,7 +61,7 @@ var CPM = Bodies.rectangle(1061, 305, 411, 306, {chamfer: {radius: radius}, rend
 
 // add all of the bodies to the world
 World.add(engine.world, [
-  ground, wallLeft, wallRight, roof, eye, alpha, light, coins, balanceDisplay, CPM
+  ground, wallLeft, wallRight, eye, alpha, light, coins, balanceDisplay, CPM
 ]);
 
 // add mouse control
