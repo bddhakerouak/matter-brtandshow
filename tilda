@@ -54,7 +54,7 @@ var light = Bodies.rectangle(458, 83, 209, 209, {chamfer: {radius: radius}, rend
 var coins = Bodies.rectangle(128, 65, 197, 197, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3962-3830-4938-a166-343266393963/coins.svg', xScale: 1, yScale: 1 }}})
 var balanceDisplay = Bodies.rectangle(278, -29, 218, 94, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6338-6235-4633-b566-336331346239/balanceDisplay.svg', xScale: 1, yScale: 1 }}})
 // video
-var CPM = Bodies.rectangle(661, 265, 411, 306, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild6531-6137-4133-a230-626166383230/CPM.svg', xScale: 1, yScale: 1 }}})
+var CPM = Bodies.rectangle(661, 265, 411, 306, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://static.tildacdn.com/tild3838-6162-4534-b061-346661326261/CPM.svg', xScale: 1, yScale: 1 }}})
 
 
 // Original Shape
